@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="caramelloApp">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caramello Camel Caser</title>
+  <link rel="stylesheet" href="./styles/base.css" />
+
+</head>
+<body class="span-12 padding-standard">
+  <h1 class="span-12 padding-bottom center-text">Fancy Forms</h1> 
+
+  <div class="span-12 fancy-radio-buttons margin-bottom">
+    <h2>Radio buttons</h2> 
+    <p><strong>What is the capital of Norway?</strong></p>
+    <div class="span-6">
+      <input type="radio" id="i-one" name="initialStates" />
+      <label for="i-one">Paris</label>
+      <br><br>
+      <input type="radio" id="i-two" name="initialStates" />
+      <label for="i-two">Toronto</label>
+      <br><br>
+      <input type="radio" id="i-three" name="initialStates" />
+      <label for="i-three">Rome</label>
+      <br><br>
+      <input type="radio" id="i-four" name="initialStates" />
+      <label for="i-four">Oslo</label>
+    </div>
+
+    <div class="span-6">
+      <textarea>
+        <pre>
+          <input type="radio" id="i-one" name="initialStates" />
+          <label for="i-one">Paris</label>
+        </pre>
+      </textarea>
+    </div>
+    
+  </div> 
+
+  <div class="fancy-labels span-12 margin-bottom">
+    <h2>Fancy checkbox labels</h2>
+    <input ng-model="jc" type="checkbox" id="jc"></input>
+    <label for="jc" class="splan-3">Junior Cert</label>
+    <input ng-model="ty" type="checkbox" id="ty"></input>
+    <label for="ty" class="splan-3">Transition Year</label>
+  </div>
+
+  <div class="span-12 margin-bottom">
+    <h2>Fancy radio labels</h2>
+    <radiogroup class="fancy-labels">
+      <input ng-model="po.selectCourse" type="radio" id="jc" value="1" name="selectCourse" checked="checked"></input>
+      <label class="splan-6" for="jc">Junior Cert</label>
+      <input ng-model="po.selectCourse" class="" type="radio" value="2" id="ty" name="selectCourse"></input>
+      <label class="splan-6" for="ty">Transition Year</label>
+    </radiogroup>
+  </div>
+
+</body>
+</html>
