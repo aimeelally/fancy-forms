@@ -4,16 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Caramello Camel Caser</title>
+  
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="./styles/base.css" />
 
 </head>
-<body class="span-12 padding-standard">
-  <h1 class="span-12 padding-bottom center-text">Fancy Forms</h1> 
+<body class="span-12 page-padding">
+  <h1 class="center-text">Fancy Forms</h1> 
 
-  <div class="span-12 fancy-radio-buttons margin-bottom">
-    <h2>Radio buttons</h2> 
+  <h2>Radio buttons</h2> 
+  <div class="
+              span-12 
+              padding-standard
+              fancy-radio-buttons 
+              margin-bottom
+              blue-bg">
     <p><strong>What is the capital of Norway?</strong></p>
-    <div class="span-6">
+    <div class="span-6 padding-bottom md-screen">
       <input type="radio" id="i-one" name="initialStates" />
       <label for="i-one">Paris</label>
       <br><br>
@@ -27,16 +34,64 @@
       <label for="i-four">Oslo</label>
     </div>
 
-    <div class="span-6">
-      <textarea>
-        <pre>
-          <input type="radio" id="i-one" name="initialStates" />
-          <label for="i-one">Paris</label>
-        </pre>
-      </textarea>
+    <div class="span-12">
+      <pre>
+        <code>
+          &lt;input 
+            type="radio" 
+            id="i-one" 
+            name="initialStates" />
+          
+          &lt;label for="i-one">Paris&lt;/label>
+        </code>
+      </pre>
     </div>
     
   </div> 
+
+  <h2>Checkboxes</h2> 
+
+  <div class="
+              span-12
+              padding-standard 
+              margin-bottom
+              blue-bg">
+    <p><strong>Select all of the correct spellings.</strong></p>
+    <div class="fancy-checkboxes">
+      <input type="checkbox" id="a-one" name="initialStates" />
+      <label for="a-one"></label>
+      <label for="a-one">Airoplane</label>
+      <br><br>
+      <input type="checkbox" id="a-two" name="initialStates" />
+      <label for="a-two"></label>
+      <label for="a-two">Aeroplane</label>
+      <br><br>
+      <input type="checkbox" id="a-three" name="initialStates" />
+      <label for="a-three"></label>
+      <label for="a-three">Earlyplane</label>
+      <br><br>
+      <input type="checkbox" id="a-four" name="initialStates" />
+      <label for="a-four"></label>
+      <label for="a-four">Airplane</label>
+      <br><br>
+    </div>
+
+    <div class="span-12">
+      <pre>
+        <code>
+          &lt;input 
+            type="checkbox" 
+            id="a-one" 
+            name="initialStates" />
+
+          &lt;label for="a-one">&lt;/label>
+          
+          &lt;label for="a-one">Airoplane&lt;/label>
+        </code>
+      </pre>
+    </div>
+
+  </div>
 
   <div class="fancy-labels span-12 margin-bottom">
     <h2>Fancy checkbox labels</h2>

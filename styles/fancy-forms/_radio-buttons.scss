@@ -11,7 +11,7 @@
     vertical-align: middle;
     cursor: pointer;
     display:inline-block;
-    box-sizing: initial;
+    //box-sizing: initial;
   }
  
   input[type="radio"] + label:before{
@@ -19,8 +19,8 @@
     position: absolute;
     left: 0; //required for firefox alignment issue
     top: 0;
-    height: .65em;
-    width: .65em;
+    height: 1em;
+    width: 1em;
     border-radius: 1em;
     border: .3em solid $color-neutral-0;
     @include resting-box-shadow-radio($color-neutral-5);

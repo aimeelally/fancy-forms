@@ -2,6 +2,12 @@
 /* // breakpoints
 $breakpoint-small: "only screen and (min-width: 20em)";
 $breakpoint-medium: "only screen and (min-width: 30em)"; */
+.page-padding {
+  padding: 5% 10%; }
+
+.blue-bg {
+  background: lightblue; }
+
 .center-text {
   text-align: center; }
 
@@ -140,6 +146,25 @@ body {
   overflow: hidden;
   float: none; }
 
+html, body {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  -moz-box-sizing: inherit; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+pre {
+  margin: 0;
+  color: #F90093;
+  background-color: #ffffff;
+  border: 1px solid #F90093;
+  border-radius: 4px; }
+
 /*** FANCY RADIO BUTTONS & FANCY RADIO BUTTONS WITH IMAGES ***/
 .fancy-radio-buttons {
   /*** STATES ***/
@@ -152,15 +177,14 @@ body {
     padding-left: 1.5em;
     vertical-align: middle;
     cursor: pointer;
-    display: inline-block;
-    box-sizing: initial; }
+    display: inline-block; }
   .fancy-radio-buttons input[type="radio"] + label:before {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
-    height: .65em;
-    width: .65em;
+    height: 1em;
+    width: 1em;
     border-radius: 1em;
     border: 0.3em solid #ffffff;
     box-shadow: 0px 0px 0px 2px #a1a1a1; }
@@ -260,12 +284,14 @@ body {
   position: relative;
   /*** STATES ***/ }
   .fancy-checkboxes input[type="checkbox"] {
-    opacity: 0; }
+    opacity: 0;
+    position: absolute; }
   .fancy-checkboxes input[type="checkbox"] + label {
     width: 1.5em;
     height: 1.5em;
-    position: absolute;
-    left: 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
     border-radius: 5px;
     cursor: pointer;
     background: #ffffff;
@@ -282,8 +308,9 @@ body {
     border-left: 5px solid #F90093;
     border-bottom: 5px solid #F90093; }
   .fancy-checkboxes input[type="checkbox"] + label + label {
-    margin-left: 0.1em;
-    cursor: pointer; }
+    margin-left: 0.5em;
+    cursor: pointer;
+    vertical-align: middle; }
   .fancy-checkboxes input[type="checkbox"]:focus + label {
     box-shadow: 0px 0px 10px 0px #F90093; }
   .fancy-checkboxes input[type="checkbox"].incorrect:focus + label {
