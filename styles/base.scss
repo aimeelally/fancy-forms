@@ -1,11 +1,13 @@
 @import 
+'partials/reset',
+'partials/mixins',
 'partials/variables';
 
 // PARTIALS
 @import 
 'partials/layout',
 'partials/grid',
-'partials/reset';
+'partials/buttons';
 
 // FANCY FORMS
 @import 

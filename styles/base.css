@@ -1,9 +1,43 @@
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower|Poppins");
+html, body {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  -moz-box-sizing: inherit; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
 /* // breakpoints
 $breakpoint-small: "only screen and (min-width: 20em)";
 $breakpoint-medium: "only screen and (min-width: 30em)"; */
 .page-padding {
   padding: 5% 10%; }
+
+pre {
+  margin: 0;
+  color: #F90093;
+  background-color: #ffffff;
+  border: 1px solid #F90093;
+  border-radius: 4px;
+  white-space: pre-wrap; }
+
+aside {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding: 1em;
+  width: 250px;
+  height: 100%;
+  background: #4a4a49;
+  color: #F90093; }
+
+main {
+  padding-left: 250px; }
 
 .bg-blue {
   background: aliceblue; }
@@ -155,25 +189,190 @@ body {
   overflow: hidden;
   float: none; }
 
-html, body {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box; }
+.btn-1, .btn-2, .btn-3, .btn-4, .btn-5, .btn-6, .btn-7, .btn-8 {
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-font-smoothing: subpixel-antialiased; }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-  -moz-box-sizing: inherit; }
+.btn-1 {
+  background-color: #F90093;
+  border: 2px solid #F90093;
+  font-size: 18px;
+  padding: .5em 2em;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  color: #ffffff;
+  /* &[disabled]{
+    background-color:$color-1;
+    border: 2px solid $color-1-hover;
+  }
+  &[disabled]::after{
+    content:' ...';
+    width:0px;
+    display:inline-block;
+    overflow:visible;
+  } */ }
+  .btn-1:hover {
+    text-decoration: none;
+    background-color: #C60F7B;
+    border: 2px solid #C60F7B; }
+  .btn-1:active {
+    background-color: #F90093;
+    border: 2px solid #C60F7B; }
+  .btn-1:focus {
+    box-shadow: 0px 0px 5px 1px #a1a1a1; }
+  .btn-1[disabled] {
+    background-color: #a1a1a1;
+    border: 2px solid #a1a1a1;
+    color: #ffffff;
+    cursor: not-allowed; }
+  .btn-1.waiting {
+    background-color: #F90093;
+    border: 2px solid #F90093;
+    color: #ffffff; }
+  .btn-1.waiting::after {
+    content: ' ...';
+    width: 0px;
+    display: inline-block;
+    overflow: visible; }
+  .btn-1.inactive {
+    background-color: #a1a1a1;
+    border: 2px solid #a1a1a1;
+    color: #ffffff; }
+  .btn-1[disabled].inactive::after {
+    content: ''; }
 
-html, body {
-  margin: 0;
-  padding: 0; }
+.btn-2 {
+  background-color: transparent;
+  border: 2px solid #F90093;
+  font-size: 18px;
+  padding: .5em 2em;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  color: #F90093; }
+  .btn-2:hover {
+    text-decoration: none;
+    color: #C60F7B;
+    border: 2px solid #C60F7B; }
+  .btn-2[disabled] {
+    background-color: transparent;
+    border: 2px solid #F90093; }
 
-pre {
-  margin: 0;
+.btn-3 {
+  color: #a1a1a1;
+  border: none;
+  background: none; }
+  .btn-3:hover {
+    color: #F90093; }
+
+.btn-4 {
   color: #F90093;
+  border: none;
+  background: none; }
+  .btn-4:hover {
+    text-decoration: underline; }
+  .btn-4[disabled] {
+    color: #a1a1a1;
+    text-decoration: none; }
+
+.btn-5 {
   background-color: #ffffff;
-  border: 1px solid #F90093;
-  border-radius: 4px;
-  white-space: pre-wrap; }
+  border: 2px solid white;
+  font-size: 18px;
+  padding: .5em 2em;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  color: #F90093; }
+  .btn-5:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #C60F7B;
+    border: 2px solid #C60F7B; }
+  .btn-5:active {
+    color: #ffffff;
+    background-color: #F90093;
+    border: 2px solid #C60F7B; }
+  .btn-5[disabled] {
+    color: #ffffff;
+    background-color: #F90093;
+    border: 2px solid #C60F7B; }
+  .btn-5.inactive {
+    color: #ffffff;
+    background-color: #a1a1a1;
+    border: 2px solid #a1a1a1; }
+
+.btn-6 {
+  background-color: transparent;
+  border: 2px solid white;
+  font-size: 18px;
+  padding: .5em 2em;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  color: #ffffff; }
+  .btn-6:hover {
+    text-decoration: none;
+    color: #C60F7B;
+    border: 2px solid #C60F7B; }
+
+.btn-7 {
+  color: #e2e2e2;
+  border: none;
+  background: none; }
+  .btn-7:hover {
+    color: #F90093; }
+
+.btn-8 {
+  color: #ffffff;
+  border: none;
+  background: none; }
+  .btn-8:hover {
+    text-decoration: underline; }
+
+button:focus {
+  outline-style: none; }
+
+.button-fullwidth {
+  width: 100%; }
+
+[class*='btn-']:hover, [class*='btn-']:active {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+[class*='btn-'][disabled] {
+  opacity: 0.5;
+  cursor: not-allowed; }
+
+/* [class*='btn-'][disabled]::after{
+  content:' ...';
+  width:0px;
+  display:inline-block;
+  overflow:visible;
+} */
+@media screen and (min-width: 600px) {
+  .btn-1, .btn-2, .btn-5, .button-style {
+    min-width: 150px; } }
+
+.btn-1.loading-15[disabled] {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AcZDjU7XAVzvwAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAMSURBVAjXYzBddg8AAs0Bus8pBfAAAAAASUVORK5CYII=");
+  background-size: 0% 100%;
+  transition: background-size 6s linear;
+  background-repeat: no-repeat; }
+  .btn-1.loading-15[disabled].loading-go {
+    background-size: 100% 100%; }
 
 /*** FANCY RADIO BUTTONS & FANCY RADIO BUTTONS WITH IMAGES ***/
 .fancy-radio-buttons {
@@ -528,7 +727,7 @@ pre {
 
 /*** /FANCY SELECT BOX ***/
 .fancy-labels label {
-  border: 1px solid #e9e9e9;
+  border: 2px solid #a1a1a1;
   background-color: #ffffff;
   cursor: pointer;
   padding: 0.5em;
@@ -536,7 +735,7 @@ pre {
   margin-bottom: 0.2em;
   transition: all 0.2s ease-in-out; }
   .fancy-labels label:hover {
-    border: 1px solid #F90093;
+    border: 2px solid #F90093;
     color: #F90093;
     transition: all 0.2s ease-in-out; }
 
@@ -548,7 +747,7 @@ pre {
   .fancy-labels input:checked + label,
   .fancy-labels input:active + label {
     background-color: #F90093;
-    border: 1px solid #F90093;
+    border: 2px solid #F90093;
     color: #ffffff;
     transition: all 0.2s ease-in-out; }
 
