@@ -5,8 +5,17 @@ $breakpoint-medium: "only screen and (min-width: 30em)"; */
 .page-padding {
   padding: 5% 10%; }
 
-.blue-bg {
-  background: lightblue; }
+.bg-blue {
+  background: aliceblue; }
+
+.bg-lavender {
+  background: lavender; }
+
+.bg-yellow {
+  background: lightyellow; }
+
+.bg-orange {
+  background: bisque; }
 
 .center-text {
   text-align: center; }
@@ -163,7 +172,8 @@ pre {
   color: #F90093;
   background-color: #ffffff;
   border: 1px solid #F90093;
-  border-radius: 4px; }
+  border-radius: 4px;
+  white-space: pre-wrap; }
 
 /*** FANCY RADIO BUTTONS & FANCY RADIO BUTTONS WITH IMAGES ***/
 .fancy-radio-buttons {

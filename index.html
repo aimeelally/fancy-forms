@@ -12,25 +12,29 @@
 <body class="span-12 page-padding">
   <h1 class="center-text">Fancy Forms</h1> 
 
+
+
+  <!-- FANCY RADIO BUTTONS -->
+
   <h2>Radio buttons</h2> 
   <div class="
               span-12 
               padding-standard
               fancy-radio-buttons 
               margin-bottom
-              blue-bg">
+              bg-lavender">
     <p><strong>What is the capital of Norway?</strong></p>
     <div class="span-6 padding-bottom md-screen">
-      <input type="radio" id="i-one" name="initialStates" />
+      <input type="radio" id="i-one" name="group-for-fancy-radio-buttons" />
       <label for="i-one">Paris</label>
       <br><br>
-      <input type="radio" id="i-two" name="initialStates" />
+      <input type="radio" id="i-two" name="group-for-fancy-radio-buttons" />
       <label for="i-two">Toronto</label>
       <br><br>
-      <input type="radio" id="i-three" name="initialStates" />
+      <input type="radio" id="i-three" name="group-for-fancy-radio-buttons" />
       <label for="i-three">Rome</label>
       <br><br>
-      <input type="radio" id="i-four" name="initialStates" />
+      <input type="radio" id="i-four" name="group-for-fancy-radio-buttons" />
       <label for="i-four">Oslo</label>
     </div>
 
@@ -40,7 +44,7 @@
           &lt;input 
             type="radio" 
             id="i-one" 
-            name="initialStates" />
+            name="group-for-fancy-radio-buttons" />
           
           &lt;label for="i-one">Paris&lt;/label>
         </code>
@@ -49,28 +53,32 @@
     
   </div> 
 
+
+
+  <!-- FANCY CHECKBOXES -->
+
   <h2>Checkboxes</h2> 
 
   <div class="
               span-12
               padding-standard 
               margin-bottom
-              blue-bg">
+              bg-yellow">
     <p><strong>Select all of the correct spellings.</strong></p>
     <div class="fancy-checkboxes">
-      <input type="checkbox" id="a-one" name="initialStates" />
+      <input type="checkbox" id="a-one" name="group-for-fancy-checkboxes" />
       <label for="a-one"></label>
       <label for="a-one">Airoplane</label>
       <br><br>
-      <input type="checkbox" id="a-two" name="initialStates" />
+      <input type="checkbox" id="a-two" name="group-for-fancy-checkboxes" />
       <label for="a-two"></label>
       <label for="a-two">Aeroplane</label>
       <br><br>
-      <input type="checkbox" id="a-three" name="initialStates" />
+      <input type="checkbox" id="a-three" name="group-for-fancy-checkboxes" />
       <label for="a-three"></label>
       <label for="a-three">Earlyplane</label>
       <br><br>
-      <input type="checkbox" id="a-four" name="initialStates" />
+      <input type="checkbox" id="a-four" name="group-for-fancy-checkboxes" />
       <label for="a-four"></label>
       <label for="a-four">Airplane</label>
       <br><br>
@@ -82,7 +90,7 @@
           &lt;input 
             type="checkbox" 
             id="a-one" 
-            name="initialStates" />
+            name="group-for-fancy-checkboxes" />
 
           &lt;label for="a-one">&lt;/label>
           
@@ -93,15 +101,134 @@
 
   </div>
 
-  <div class="fancy-labels span-12 margin-bottom">
+
+
+
+  <!-- FANCY LABELS USING CHECKBOXES -->
+
+  <h2>Fancy Labels using Checkboxes</h2> 
+
+  <div class="
+              span-12
+              padding-standard 
+              margin-bottom
+              bg-blue">
+    <p><strong>Select all of the correct spellings.</strong></p>
+    <div class="fancy-labels">
+      <input 
+        type="checkbox" 
+        id="flcb-one" 
+        name="group-for-fancy-labels-using-checkboxes" />
+      <label 
+        for="flcb-one"
+        class="span-3 md-screen sm-screen">
+        Airoplane
+      </label>
+      <input 
+        type="checkbox" 
+        id="flcb-two" 
+        name="group-for-fancy-labels-using-checkboxes" />
+      <label 
+        for="flcb-two"
+        class="span-3 md-screen sm-screen">
+        Aeroplane
+      </label>
+      <input 
+        type="checkbox" 
+        id="flcb-three" 
+        name="group-for-fancy-labels-using-checkboxes" />
+      <label 
+        for="flcb-three"
+        class="span-3 md-screen sm-screen">
+        Earlyplane
+      </label>
+      <input 
+        type="checkbox" 
+        id="flcb-four" 
+        name="group-for-fancy-labels-using-checkboxes" />
+      <label 
+        for="flcb-four"
+        class="span-3 md-screen sm-screen">
+        Airplane
+      </label>
+    </div>
+
+    <div class="span-12">
+      <h3>Code sample</h3>
+      <pre>
+        <code>
+          &lt;input 
+            type="checkbox" 
+            id="flcb-one" 
+            name="group-for-fancy-labels-using-checkboxes" />
+
+          &lt;label 
+            for="flcb-one"
+            class="span-3 md-screen sm-screen">
+            Airoplane
+          &lt;/label>
+        </code>
+      </pre>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- FANCY LABELS USING RADIO BUTTONS -->
+
+  <h2>Fancy Labels using Radio Buttons</h2> 
+
+  <div class="
+              span-12
+              padding-standard 
+              margin-bottom
+              bg-orange">
+    <p><strong>Select all of the correct spellings.</strong></p>
+    <div class="fancy-labels">
+      <input type="radio" id="flrb-one" name="group-for-fancy-labels-using-radio-buttons" />
+      <label for="flrb-one" class="span-3 md-screen sm-screen">Paris</label>
+
+      <input type="radio" id="flrb-two" name="group-for-fancy-labels-using-radio-buttons" />
+      <label for="flrb-two" class="span-3 md-screen sm-screen">Toronto</label>
+
+      <input type="radio" id="flrb-three" name="group-for-fancy-labels-using-radio-buttons" />
+      <label for="flrb-three" class="span-3 md-screen sm-screen">Rome</label>
+      
+      <input type="radio" id="flrb-four" name="group-for-fancy-labels-using-radio-buttons" />
+      <label for="flrb-four" class="span-3 md-screen sm-screen">Oslo</label>
+    </RADIO>
+
+    <div class="span-12">
+      <h3>Code sample</h3>
+      <pre>
+        <code>
+          &lt;input 
+            type="radio" 
+            id="flrb-one" 
+            name="group-for-fancy-labels-using-radio-buttons" />
+
+          &lt;label 
+            for="flrb-one" 
+            class="span-3 md-screen sm-screen">
+            Paris
+          &lt;/label>
+        </code>
+      </pre>
+    </div>
+
+  </div>
+
+  <!-- <div class="fancy-labels span-12 margin-bottom">
     <h2>Fancy checkbox labels</h2>
     <input ng-model="jc" type="checkbox" id="jc"></input>
     <label for="jc" class="splan-3">Junior Cert</label>
     <input ng-model="ty" type="checkbox" id="ty"></input>
     <label for="ty" class="splan-3">Transition Year</label>
-  </div>
+  </div> -->
 
-  <div class="span-12 margin-bottom">
+  <!-- <div class="span-12 margin-bottom">
     <h2>Fancy radio labels</h2>
     <radiogroup class="fancy-labels">
       <input ng-model="po.selectCourse" type="radio" id="jc" value="1" name="selectCourse" checked="checked"></input>
@@ -109,7 +236,7 @@
       <input ng-model="po.selectCourse" class="" type="radio" value="2" id="ty" name="selectCourse"></input>
       <label class="splan-6" for="ty">Transition Year</label>
     </radiogroup>
-  </div>
+  </div> -->
 
 </body>
 </html>
