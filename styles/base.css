@@ -14,6 +14,12 @@ html, body {
 /* // breakpoints
 $breakpoint-small: "only screen and (min-width: 20em)";
 $breakpoint-medium: "only screen and (min-width: 30em)"; */
+body {
+  font-size: 100%;
+  font: inherit;
+  font-family: "Lato", sans-serif;
+  color: #4a4a49; }
+
 .page-padding {
   padding: 5% 10%; }
 
@@ -50,6 +56,9 @@ main {
 
 .bg-orange {
   background: bisque; }
+
+.bg-green {
+  background: palegreen; }
 
 .center-text {
   text-align: center; }
@@ -88,12 +97,6 @@ main {
 
 .vertical-align-bottom {
   vertical-align: bottom; }
-
-body {
-  font-size: 100%;
-  font: inherit;
-  font-family: "Lato", sans-serif;
-  color: #4a4a49; }
 
 .span-1 {
   width: 8.33333%; }
@@ -683,23 +686,44 @@ button:focus {
     border-right: 2px solid transparent; }
 
 /*** /FANCY INPUT BOXES ***/
-/*** FANCY SELECT BOX ***/
-.fancy-select-boxes .fa-chevron-down {
-  color: #F90093;
-  margin-left: -2em; }
+/** FANCY SELECT BOX ***/
+.fancy-select-boxes.select-box-container {
+  position: relative;
+  display: inline-block; }
+
+.fancy-select-boxes .select-box-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #ffffff; }
+
+.fancy-select-boxes .chevron {
+  width: 0.5em;
+  height: 0.5em;
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  border-top: 0.2em solid #a1a1a1;
+  border-right: 0.2em solid #a1a1a1;
+  z-index: 2;
+  transform: rotate(135deg); }
 
 .fancy-select-boxes select {
+  position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: #ffffff;
+  background: transparent;
   outline: none;
-  padding: 0.3em 2em 0.3em 0.3em;
+  padding: 0.5em 2em 0.5em 0.5em;
   font: inherit;
-  color: #F90093;
-  border: 2px solid #F90093;
+  color: #4a4a49;
+  border: 2px solid #a1a1a1;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
+  z-index: 3;
+  cursor: pointer;
   /*** STATES ***/ }
   .fancy-select-boxes select:focus {
     box-shadow: 1px 1px 10px 1px #F90093; }
@@ -725,7 +749,7 @@ button:focus {
   .fancy-select-boxes select.correct {
     border: 2px solid #70C1B3; }
 
-/*** /FANCY SELECT BOX ***/
+/*** /FANCY SELECT BOX **/
 .fancy-labels label {
   border: 2px solid #a1a1a1;
   background-color: #ffffff;

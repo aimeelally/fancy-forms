@@ -32,11 +32,14 @@
       class="btn-3 block margin-bottom">
       Fancy Labels using Checkboxes
     </a>
+    <a 
+      href="#fancy-select-boxes"
+      class="btn-3 block margin-bottom">
+      Fancy Selectboxes
+    </a>
   </aside>
 
   <main>
-
-    <div class="pagepadding">
 
       <!-- FANCY RADIO BUTTONS -->
       
@@ -131,7 +134,7 @@
                   span-12
                   page-padding
                   bg-blue">
-        <h2 class="fancy-labels-using-checkboxes">Fancy Labels using Checkboxes</h2> 
+        <h2 id="fancy-labels-using-checkboxes">Fancy Labels using Checkboxes</h2> 
         <p>Select all of the correct spellings.</p>
         <div class="fancy-labels">
           <input 
@@ -202,7 +205,7 @@
                   page-padding
                   bg-orange">
         <h2 id="fancy-labels-using-radio-buttons">Fancy Labels using Radio Buttons</h2> 
-        <p>Select all of the correct spellings.</p>
+        <p>What is the capital of Norway?</p>
         <div class="fancy-labels">
           <input type="radio" id="flrb-one" name="group-for-fancy-labels-using-radio-buttons" />
           <label for="flrb-one" class="span-3 md-screen sm-screen">Paris</label>
@@ -215,8 +218,8 @@
           
           <input type="radio" id="flrb-four" name="group-for-fancy-labels-using-radio-buttons" />
           <label for="flrb-four" class="span-3 md-screen sm-screen">Oslo</label>
-        </RADIO>
 
+        </div>
         <div class="span-12">
           <h3>Code sample</h3>
           <pre>
@@ -237,10 +240,54 @@
 
       </div>
 
+      <!-- SELECT BOXES -->
 
-
-
-    </div>
+      <div class="
+                  span-12 
+                  page-padding
+                  bg-green
+                  bg-lavender
+                  relative">
+        <h2 id="fancy-select-boxes">Fancy Select Boxes</h2> 
+        <p>What is the capital of Norway?</p>
+        <div class="fancy-select-boxes select-box-container">
+          <select>
+            <option value="paris">
+              Paris 
+            </option>
+            <option value="toronto">
+              Toronto
+            </option>
+            <option value="rome">
+              Rome
+            </option>
+            <option value="Oslo" selected>
+              Oslo
+            </option>
+          </select>
+          <div class="select-box-background"></div>
+          <div class="chevron"></div>
+        </div>
+        <div class="span-12">
+          <h3>Code sample</h3>
+          <p data-height="265" data-theme-id="0" data-slug-hash="QrKvOO" data-default-tab="result" data-user="aimeelally" data-embed-version="2" data-pen-title="Fancy forms - selectbox" class="codepen">See the Pen <a href="https://codepen.io/aimeelally/pen/QrKvOO/">Fancy forms - selectbox</a> by Aimée (<a href="https://codepen.io/aimeelally">@aimeelally</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          <!-- <pre>
+            <code>
+              &lt;div class="fancy-select-boxes select-box-container">
+                &lt;select>
+                  &lt;option value="paris">
+                    Paris 
+                  &lt;/option>
+                &lt;/select>
+                &lt;div class="select-box-background">&lt;/div>
+                &lt;div class="chevron">&lt;/div>
+              &lt;/div>
+            </code>
+          </pre> -->
+        </div>
+        
+      </div>
 
   </main>
   

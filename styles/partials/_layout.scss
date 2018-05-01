@@ -1,3 +1,10 @@
+body {
+  font-size: 100%;
+  font: inherit;
+  font-family: $font;
+  color: $color-font;
+}
+
 .page-padding {
   padding: 5% 10%;
 }
@@ -33,6 +40,7 @@ main {
 .bg-lavender { background: lavender; }
 .bg-yellow { background: lightyellow; }
 .bg-orange { background: bisque; }
+.bg-green { background: palegreen; }
 
 .center-text{
   text-align: center;
@@ -76,12 +84,7 @@ main {
   vertical-align: bottom;
 }
 
-body {
-  font-size: 100%;
-  font: inherit;
-  font-family: $font;
-  color: $color-font;
-}
+
 
 // ******** /layout ********
 

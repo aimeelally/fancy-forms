@@ -1,4 +1,5 @@
 /* FANCY CHECKBOX */
+
 .fancy-checkboxes {
   position: relative;
   
@@ -15,8 +16,8 @@
     vertical-align: middle;
     border-radius: 5px;
     cursor: pointer;
-    background: $color-neutral-0;
-    @include border-2($color-neutral-5);
+    background: $color-checkbox-bg;
+    @include border-2($color-checkbox-border);
   }
   
   input[type="checkbox"] + label:after {
@@ -28,7 +29,7 @@
     top: 0.3em;
     left: 0.25em;
     transform: rotate(-45deg);
-    @include border-tick($color-1);
+    @include border-tick($color-checkbox-checked);
   }
    
   
@@ -44,13 +45,13 @@
 
   //FOCUS
   input[type="checkbox"]:focus + label {
-    @include focus-box-shadow-checkbox($color-1);
+    @include focus-box-shadow-checkbox($color-checkbox-focused);
   }  
   input[type="checkbox"].incorrect:focus + label {
-    @include focus-box-shadow-checkbox($color-alert);
+    @include focus-box-shadow-checkbox($color-checkbox-answer-incorrect);
   }
   input[type="checkbox"].correct:focus + label {
-    @include focus-box-shadow-checkbox($color-success);
+    @include focus-box-shadow-checkbox($color-checkbox-answer-correct);
   }
 
   //HOVER
