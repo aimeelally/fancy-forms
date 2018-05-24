@@ -63,6 +63,9 @@ main {
 .bg-aquamarine {
   background: aquamarine; }
 
+.bg-cadetblue {
+  background: cadetblue; }
+
 .center-text {
   text-align: center; }
 
@@ -474,7 +477,8 @@ button:focus {
     border-radius: 5px;
     display: block;
     position: relative;
-    padding: 1em; }
+    padding: 1em;
+    background: #ffffff; }
   .fancy-radio-buttons.with-image {
     display: flex;
     flex-direction: column; }
@@ -492,12 +496,15 @@ button:focus {
       top: calc(50% + 1em);
       bottom: initial;
       left: 6px; }
+    .fancy-radio-buttons.with-image img {
+      max-width: 100%; }
 
 /*** /FANCY RADIO BUTTONS & FANCY RADIO BUTTONS WITH IMAGES ***/
 /* FANCY CHECKBOX */
 .fancy-checkboxes {
   position: relative;
-  /*** STATES ***/ }
+  /*** STATES ***/
+  /*** WITH IMAGE ***/ }
   .fancy-checkboxes input[type="checkbox"] {
     opacity: 0;
     position: absolute; }
@@ -526,30 +533,50 @@ button:focus {
     margin-left: 0.5em;
     cursor: pointer;
     vertical-align: middle; }
-  .fancy-checkboxes input[type="checkbox"]:focus + label {
+  .fancy-checkboxes input[type="checkbox"] ~ .image-bg {
+    border: 2px solid #a1a1a1;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    cursor: pointer; }
+  .fancy-checkboxes input[type="checkbox"]:focus + label,
+  .fancy-checkboxes input[type="checkbox"]:not(:disabled):focus ~ .image-bg {
     box-shadow: 0px 0px 10px 0px #F90093; }
-  .fancy-checkboxes input[type="checkbox"].incorrect:focus + label {
+  .fancy-checkboxes input[type="checkbox"].incorrect:focus + label,
+  .fancy-checkboxes input[type="checkbox"].incorrect:focus ~ .image-bg {
     box-shadow: 0px 0px 10px 0px #ff6666; }
-  .fancy-checkboxes input[type="checkbox"].correct:focus + label {
+  .fancy-checkboxes input[type="checkbox"].correct:focus + label,
+  .fancy-checkboxes input[type="checkbox"].correct:focus ~ .image-bg {
     box-shadow: 0px 0px 10px 0px #70C1B3; }
-  .fancy-checkboxes input[type="checkbox"]:not(:disabled):hover + label {
+  .fancy-checkboxes input[type="checkbox"]:not(:disabled):hover + label,
+  .fancy-checkboxes input[type="checkbox"]:not(:disabled):hover ~ .image-bg {
     border: 2px solid #F90093; }
   .fancy-checkboxes input[type="checkbox"]:checked + label:after {
     opacity: 1; }
-  .fancy-checkboxes input[type="checkbox"]:checked + label {
+  .fancy-checkboxes input[type="checkbox"]:checked + label,
+  .fancy-checkboxes input[type="checkbox"]:checked ~ .image-bg {
     border-color: #F90093; }
-  .fancy-checkboxes input[type="checkbox"].correct:checked + label {
+  .fancy-checkboxes input[type="checkbox"].correct:checked + label,
+  .fancy-checkboxes input[type="checkbox"].correct:checked ~ .image-bg {
     border-color: #70C1B3; }
-  .fancy-checkboxes input[type="checkbox"].incorrect:checked + label {
+  .fancy-checkboxes input[type="checkbox"].incorrect:checked + label,
+  .fancy-checkboxes input[type="checkbox"].incorrect:checked ~ .image-bg {
     border-color: #ff6666; }
   .fancy-checkboxes input[type="checkbox"]:disabled + label,
-  .fancy-checkboxes input[type="checkbox"]:disabled + label + label {
+  .fancy-checkboxes input[type="checkbox"]:disabled + label + label,
+  .fancy-checkboxes input[type="checkbox"]:disabled ~ .image-bg {
     opacity: 0.8;
     cursor: not-allowed; }
   .fancy-checkboxes input[type="checkbox"].correct:disabled + label,
   .fancy-checkboxes input[type="checkbox"].correct:disabled + label + label,
+  .fancy-checkboxes input[type="checkbox"].correct:disabled ~ .image-bg,
   .fancy-checkboxes input[type="checkbox"].incorrect:disabled + label,
-  .fancy-checkboxes input[type="checkbox"].incorrect:disabled + label + label {
+  .fancy-checkboxes input[type="checkbox"].incorrect:disabled + label + label,
+  .fancy-checkboxes input[type="checkbox"].incorrect:disabled ~ .image-bg {
     opacity: 1;
     cursor: not-allowed; }
   .fancy-checkboxes input[type="checkbox"].incorrect + label:after {
@@ -566,6 +593,32 @@ button:focus {
     position: absolute;
     bottom: -0.4em;
     left: 3px; }
+  .fancy-checkboxes .image-container {
+    border-radius: 5px;
+    display: block;
+    position: relative;
+    padding: 1em;
+    background: #ffffff; }
+  .fancy-checkboxes.with-image {
+    display: flex;
+    flex-direction: column; }
+    .fancy-checkboxes.with-image input[type="checkbox"] + label + label {
+      display: block;
+      margin-left: 2em; }
+    .fancy-checkboxes.with-image input[type="checkbox"] + label {
+      position: absolute;
+      top: calc(50% - 0.5em); }
+    .fancy-checkboxes.with-image input[type="checkbox"].incorrect + label + label:after {
+      border-bottom: 2px solid #ff6666;
+      width: 8px;
+      display: block;
+      position: absolute;
+      content: ' ';
+      top: calc(50% + 1em);
+      bottom: initial;
+      left: 6px; }
+    .fancy-checkboxes.with-image img {
+      max-width: 100%; }
 
 /* /FANCY-CHECKBOX */
 /*** FANCY INPUT BOXES ***/

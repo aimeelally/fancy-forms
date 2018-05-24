@@ -133,11 +133,12 @@
   }
   
   /*** WITH IMAGE ***/
-  .image-container{
+  .image-container {
     border-radius: 5px;
     display: block;
     position: relative;
     padding: 1em;
+    background: $ff-color-radiobutton-bg;
   }
   &.with-image {
     display: flex;
@@ -159,6 +160,9 @@
       top: calc(50% + 1em);
       bottom: initial;
       left:6px;
+    }
+    img {
+      max-width: 100%;
     }
   }
   

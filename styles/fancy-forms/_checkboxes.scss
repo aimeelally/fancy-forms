@@ -38,24 +38,40 @@
     cursor: pointer;
     vertical-align: middle;
   }
+
+  input[type="checkbox"] ~ .image-bg {
+    @include border-2($ff-color-checkbox-border);
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    cursor: pointer;
+  }
   
   
   
   /*** STATES ***/
 
   //FOCUS
-  input[type="checkbox"]:focus + label {
+  input[type="checkbox"]:focus + label,
+  input[type="checkbox"]:not(:disabled):focus ~ .image-bg {
     @include focus-box-shadow-checkbox($ff-color-checkbox-focused);
   }  
-  input[type="checkbox"].incorrect:focus + label {
+  input[type="checkbox"].incorrect:focus + label,
+  input[type="checkbox"].incorrect:focus ~ .image-bg {
     @include focus-box-shadow-checkbox($ff-color-checkbox-answer-incorrect);
   }
-  input[type="checkbox"].correct:focus + label {
+  input[type="checkbox"].correct:focus + label,
+  input[type="checkbox"].correct:focus ~ .image-bg {
     @include focus-box-shadow-checkbox($ff-color-checkbox-answer-correct);
   }
 
   //HOVER
-  input[type="checkbox"]:not(:disabled):hover + label {
+  input[type="checkbox"]:not(:disabled):hover + label,
+  input[type="checkbox"]:not(:disabled):hover ~ .image-bg {
     @include border-2($ff-color-checkbox-hover);
   }
 
@@ -63,27 +79,33 @@
   input[type="checkbox"]:checked + label:after {
     opacity: 1;
   }
-  input[type="checkbox"]:checked + label {
+  input[type="checkbox"]:checked + label,
+  input[type="checkbox"]:checked ~ .image-bg {
     border-color: $ff-color-checkbox-checked;
   }
-  input[type="checkbox"].correct:checked + label {
+  input[type="checkbox"].correct:checked + label,
+  input[type="checkbox"].correct:checked ~ .image-bg {
     border-color: $ff-color-checkbox-answer-correct;
   }
-  input[type="checkbox"].incorrect:checked + label {
+  input[type="checkbox"].incorrect:checked + label,
+  input[type="checkbox"].incorrect:checked ~ .image-bg {
     border-color: $ff-color-checkbox-answer-incorrect;
   } 
 
   //DISABLED
   input[type="checkbox"]:disabled + label,
-  input[type="checkbox"]:disabled + label + label {
+  input[type="checkbox"]:disabled + label + label,
+  input[type="checkbox"]:disabled ~ .image-bg {
     opacity: 0.8;
     cursor: not-allowed;
   }
 
   input[type="checkbox"].correct:disabled + label,
   input[type="checkbox"].correct:disabled + label + label,
+  input[type="checkbox"].correct:disabled ~ .image-bg,
   input[type="checkbox"].incorrect:disabled + label,
-  input[type="checkbox"].incorrect:disabled + label + label {
+  input[type="checkbox"].incorrect:disabled + label + label,
+  input[type="checkbox"].incorrect:disabled ~ .image-bg {
     opacity: 1;
     cursor: not-allowed;
   }
@@ -105,6 +127,41 @@
     position: absolute;
     bottom: -0.4em;
     left: 3px;
+  }
+
+  /*** WITH IMAGE ***/
+  .image-container {
+    border-radius: 5px;
+    display: block;
+    position: relative;
+    padding: 1em;
+    background: $ff-color-checkbox-bg;
+  }
+  &.with-image {
+    display: flex;
+    flex-direction: column;
+    input[type="checkbox"] + label + label {
+      display: block;
+      margin-left: 2em;
+    }
+    input[type="checkbox"] + label {
+      position: absolute;
+      top: calc(50% - 0.5em); //50% + half the height of a checkbox so it lines up correctly
+    }
+    //ACCESSIBILITY
+    input[type="checkbox"].incorrect + label + label:after {
+      border-bottom: 2px solid $ff-color-checkbox-answer-incorrect;
+      width: 8px;
+      display: block;
+      position: absolute;
+      content: ' ';
+      top: calc(50% + 1em);
+      bottom: initial;
+      left:6px;
+    }
+    img {
+      max-width: 100%;
+    }
   }
    
 }
