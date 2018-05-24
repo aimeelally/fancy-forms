@@ -1,7 +1,7 @@
 .fancy-labels{
 
   label {
-    border: $border-standard;
+    @include border-2($color-neutral-5);
     background-color: $color-neutral-0;
     cursor: pointer;
     padding: 0.5em;
@@ -9,7 +9,7 @@
     margin-bottom: 0.2em; //provides a gap between options on smaller screens
     transition: all 0.2s ease-in-out;
     &:hover {
-      border: $border-primary;
+      @include border-2($color-1);
       color: $color-1;
       transition: all 0.2s ease-in-out;
     }
@@ -24,7 +24,7 @@
     &:checked + label,
     &:active + label {
       background-color: $color-1;
-      border: $border-primary;
+      @include border-2($color-1);
       color: $color-neutral-0;
       transition: all 0.2s ease-in-out;
     }

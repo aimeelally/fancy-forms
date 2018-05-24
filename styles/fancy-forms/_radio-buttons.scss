@@ -11,7 +11,7 @@
     vertical-align: middle;
     cursor: pointer;
     display:inline-block;
-    box-sizing: initial;
+    //box-sizing: initial;
   }
  
   input[type="radio"] + label:before{
@@ -19,15 +19,15 @@
     position: absolute;
     left: 0; //required for firefox alignment issue
     top: 0;
-    height: .65em;
-    width: .65em;
+    height: 1em;
+    width: 1em;
     border-radius: 1em;
-    border: .3em solid $color-neutral-0;
-    @include resting-box-shadow-radio($color-neutral-5);
+    border: .3em solid $ff-color-radiobutton-bg;
+    @include resting-box-shadow-radio($ff-color-radiobutton-border);
   }
   
   input[type="radio"] ~ .image-bg {
-    @include border-2($color-neutral-5);
+    @include border-2($ff-color-radiobutton-border);
     border-radius: 5px;
     display: block;
     position: absolute;
@@ -40,7 +40,7 @@
 
   //ACCESSIBILITY
   input[type="radio"].incorrect + label:after {
-      border-bottom: 2px solid $color-alert;
+      border-bottom: 2px solid $ff-color-radiobutton-answer-incorrect;
       width: 8px;
       display: block;
       position: absolute;
@@ -53,7 +53,7 @@
 
   //THE TARGET
   input[type="radio"] + label:before {
-    background: $color-neutral-0;
+    background: $ff-color-radiobutton-bg;
     z-index: 1;
   }
   
@@ -64,44 +64,44 @@
   //HOVER
   input[type="radio"]:not(:disabled):hover + label:before,
   input[type="radio"]:not(:disabled):hover ~ .image-bg {
-    @include resting-box-shadow-radio($color-1);
+    @include resting-box-shadow-radio($ff-color-radiobutton-hover);
   }
   
   //CHECKED
   input[type="radio"]:checked + label:before {
-    background: $color-1;
-    @include resting-box-shadow-radio($color-1);
+    background: $ff-color-radiobutton-checked;
+    @include resting-box-shadow-radio($ff-color-radiobutton-checked);
   }
   input[type="radio"]:checked ~ .image-bg {
-    @include border-2($color-1);
+    @include border-2($ff-color-radiobutton-checked);
   }
   input[type="radio"].incorrect:checked + label:before {
-    background: $color-alert;
-    @include resting-box-shadow-radio($color-alert);
+    background: $ff-color-radiobutton-answer-incorrect;
+    @include resting-box-shadow-radio($ff-color-radiobutton-answer-incorrect);
   }
   input[type="radio"].incorrect:checked ~ .image-bg {
-    @include border-2($color-alert);
+    @include border-2($ff-color-radiobutton-answer-incorrect);
   }
   input[type="radio"].correct:checked + label:before {
-    background: $color-success;
-    @include resting-box-shadow-radio($color-success);
+    background: $ff-color-radiobutton-answer-correct;
+    @include resting-box-shadow-radio($ff-color-radiobutton-answer-correct);
   }
   input[type="radio"].correct:checked ~ .image-bg {
-    @include border-2($color-success);
+    @include border-2($ff-color-radiobutton-answer-correct);
   }
 
   //FOCUS
   input[type="radio"]:focus + label:before,
   input[type="radio"]:focus ~ .image-bg {
-    @include focus-box-shadow-radio($color-1);
+    @include focus-box-shadow-radio($ff-color-radiobutton-focused);
   }  
   input[type="radio"].incorrect:focus + label:before,
   input[type="radio"].incorrect:focus ~ .image-bg {
-    @include focus-box-shadow-radio($color-alert);
+    @include focus-box-shadow-radio($ff-color-radiobutton-answer-incorrect);
   }
   input[type="radio"].correct:focus + label:before,
   input[type="radio"].correct:focus ~ .image-bg {
-    @include focus-box-shadow-radio($color-success);
+    @include focus-box-shadow-radio($ff-color-radiobutton-answer-correct);
   }  
   
   //DISABLED
@@ -125,19 +125,20 @@
   //CORRECT & INCORRECT NOT SELECTED  
   input[type="radio"].incorrect + label:before,
   input[type="radio"].incorrect ~ .image-bg {
-    @include resting-box-shadow-radio($color-alert);
+    @include resting-box-shadow-radio($ff-color-radiobutton-answer-incorrect);
   }
   input[type="radio"].correct + label:before,
   input[type="radio"].correct ~ .image-bg {
-    @include resting-box-shadow-radio($color-success);
+    @include resting-box-shadow-radio($ff-color-radiobutton-answer-correct);
   }
   
   /*** WITH IMAGE ***/
-  .image-container{
+  .image-container {
     border-radius: 5px;
     display: block;
     position: relative;
     padding: 1em;
+    background: $ff-color-radiobutton-bg;
   }
   &.with-image {
     display: flex;
@@ -151,7 +152,7 @@
     }
     //ACCESSIBILITY
     input[type="radio"].incorrect + label:after {
-      border-bottom: 2px solid $color-alert;
+      border-bottom: 2px solid $ff-color-radiobutton-answer-incorrect;
       width: 8px;
       display: block;
       position: absolute;
@@ -159,6 +160,9 @@
       top: calc(50% + 1em);
       bottom: initial;
       left:6px;
+    }
+    img {
+      max-width: 100%;
     }
   }
   

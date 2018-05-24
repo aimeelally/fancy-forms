@@ -1,3 +1,49 @@
+body {
+  font-size: 100%;
+  font: inherit;
+  font-family: $font;
+  color: $color-font;
+}
+
+.page-padding {
+  padding: 5% 10%;
+}
+
+pre {
+  margin: 0;
+  color: $color-1;
+  background-color: $color-neutral-0;
+  border: 1px solid $color-1;
+  border-radius: 4px;
+  white-space: pre-wrap;
+}
+
+$sidebar-width: 250px;
+
+aside {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding: 1em;
+  width: $sidebar-width;
+  height: 100%;
+  background: $color-font;
+  color: $font-on-dark-bg;
+}
+
+main {
+  padding-left: $sidebar-width;
+}
+
+.bg-blue { background: aliceblue; }
+.bg-lavender { background: lavender; }
+.bg-yellow { background: lightyellow; }
+.bg-orange { background: bisque; }
+.bg-green { background: palegreen; }
+.bg-aquamarine { background: aquamarine; }
+.bg-cadetblue { background: cadetblue; }
+
 .center-text{
   text-align: center;
 }
@@ -40,12 +86,7 @@
   vertical-align: bottom;
 }
 
-body {
-  font-size: 100%;
-  font: inherit;
-  font-family: $font;
-  color: $color-font;
-}
+
 
 // ******** /layout ********
 
