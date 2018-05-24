@@ -10,3 +10,7 @@ REQUIRED FOR THIS TO BE WORKABLE FOR NON-ADAPTEMY USERS
 - what about the grid system we use to layout the fancy labels??
 - need to provide an area of variables for users to set their own colours 
 - show how to add colours via css also
+
+TO RUN
+- npm run build-css
+- npm run watch-css

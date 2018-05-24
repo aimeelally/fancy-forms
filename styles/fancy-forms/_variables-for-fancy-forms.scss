@@ -1,9 +1,46 @@
+// use a prefix to try and avoid accidentally overwriting a future users values e.g. ff
+// extract the common variables so a user can modify in bulk or individually e.g. ff-color-1
+
+// USE THESE VARIABLES TO MODIFY ALL FORM ELEMENTS
+$ff-color-primary: #F90093; //$color-1
+$ff-color-answer-correct: #70C1B3; //$color-success
+$ff-color-answer-incorrect: #ff6666; //$color-alert
+$ff-color-bg: #ffffff; //$color-neutral-0
+$ff-color-initial-state: #a1a1a1; //$color-neutral-5
+
+//INPUTBOXES
+$ff-color-inputbox-bg: $ff-color-bg;
+$ff-color-inputbox-border: $ff-color-initial-state;
+$ff-color-inputbox-hover: $ff-color-primary;
+$ff-color-inputbox-focused: $ff-color-primary;
+//$ff-color-inputbox-checked: $ff-color-primary;
+$ff-color-inputbox-answer-correct: $ff-color-answer-correct;
+$ff-color-inputbox-answer-incorrect: $ff-color-answer-incorrect;
+
+//RADIOBUTTONS
+$ff-color-radiobutton-bg: $ff-color-bg;
+$ff-color-radiobutton-border: $ff-color-initial-state;
+$ff-color-radiobutton-hover: $ff-color-primary;
+$ff-color-radiobutton-focused: $ff-color-primary;
+$ff-color-radiobutton-checked: $ff-color-primary;
+$ff-color-radiobutton-answer-correct: $ff-color-answer-correct;
+$ff-color-radiobutton-answer-incorrect: $ff-color-answer-incorrect;
 
 //CHECKBOXES
-$color-checkbox-bg: #ffffff; //$color-neutral-0
-$color-checkbox-border: #a1a1a1; //$color-neutral-5
-$color-checkbox-checked: #F90093; //$color-1
-$color-checkbox-focused: #F90093; //$color-1
-$color-checkbox-answer-correct: #70C1B3; //$color-success
-$color-checkbox-answer-incorrect: #F90093; //$color-alert
-$color-checkbox-hover: #F90093; //$color-1
+$ff-color-checkbox-bg: $ff-color-bg;
+$ff-color-checkbox-border: $ff-color-initial-state;
+$ff-color-checkbox-hover: $ff-color-primary;
+$ff-color-checkbox-focused: $ff-color-primary;
+$ff-color-checkbox-checked: $ff-color-primary;
+$ff-color-checkbox-answer-correct: $ff-color-answer-correct;
+$ff-color-checkbox-answer-incorrect: $ff-color-answer-incorrect;
+
+//SELECT BOXES
+$ff-color-selectbox-bg: $ff-color-bg;
+$ff-color-selectbox-border: $ff-color-initial-state;
+$ff-color-selectbox-chevron: $ff-color-initial-state;
+$ff-color-selectbox-hover: $ff-color-primary;
+$ff-color-selectbox-focused: $ff-color-primary;
+$ff-color-selectbox-checked: $ff-color-primary;
+$ff-color-selectbox-answer-correct: $ff-color-answer-correct;
+$ff-color-selectbox-answer-incorrect: $ff-color-answer-incorrect;

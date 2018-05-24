@@ -12,7 +12,7 @@
     height: 100%;
     position: absolute;
     top: 0;
-    background: $color-neutral-0;
+    background: $ff-color-selectbox-bg;
   }
 
   .chevron {
@@ -21,8 +21,8 @@
     position: absolute;
     top: 35%;
     right: 10%;
-    border-top: 0.2em solid $color-neutral-5;
-    border-right: 0.2em solid $color-neutral-5;
+    border-top: 0.2em solid $ff-color-selectbox-chevron;
+    border-right: 0.2em solid $ff-color-selectbox-chevron;
     z-index: 2;
     transform: rotate(135deg);
   }
@@ -35,8 +35,8 @@
     outline: none;
     padding: 0.5em 2em 0.5em 0.5em;
     font: inherit;
-    color: $color-font;
-    border: 2px solid $color-neutral-5;
+    color: inherit;
+    border: 2px solid $ff-color-selectbox-border;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
@@ -47,27 +47,27 @@
     
     //FOCUS
     &:focus {
-      @include focus-box-shadow($color-1);
+      @include focus-box-shadow($ff-color-selectbox-focused);
     }  
     &.incorrect:focus {
-      @include focus-box-shadow($color-alert);
+      @include focus-box-shadow($ff-color-selectbox-answer-incorrect);
     }
     &.correct:focus {
-      @include focus-box-shadow($color-success);
+      @include focus-box-shadow($ff-color-selectbox-answer-correct);
     }
     
     //SELECTED
     &.incorrect option:checked {
-      color: $color-alert;
+      color: $ff-color-selectbox-answer-incorrect;
     }
     
     //HOVER
     &:not(:disabled):hover {
-      @include border-2($color-1);
+      @include border-2($ff-color-selectbox-focused);
     }
 
     &.incorrect:not(:disabled):hover {
-      @include accessibility-border-bottom($color-1);
+      @include accessibility-border-bottom($ff-color-selectbox-answer-incorrect);
     }
     
     //DISABLED
@@ -83,11 +83,11 @@
     }
     
     &.incorrect {
-      @include border-2($color-alert);
-      @include accessibility-border-bottom($color-alert);
+      @include border-2($ff-color-selectbox-answer-incorrect);
+      @include accessibility-border-bottom($ff-color-selectbox-answer-incorrect);
     }
     &.correct {
-      @include border-2($color-success);
+      @include border-2($ff-color-selectbox-answer-correct);
     }
     
   }

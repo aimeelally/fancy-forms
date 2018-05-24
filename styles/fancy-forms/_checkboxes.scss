@@ -16,8 +16,8 @@
     vertical-align: middle;
     border-radius: 5px;
     cursor: pointer;
-    background: $color-checkbox-bg;
-    @include border-2($color-checkbox-border);
+    background: $ff-color-checkbox-bg;
+    @include border-2($ff-color-checkbox-border);
   }
   
   input[type="checkbox"] + label:after {
@@ -29,7 +29,7 @@
     top: 0.3em;
     left: 0.25em;
     transform: rotate(-45deg);
-    @include border-tick($color-checkbox-checked);
+    @include border-tick($ff-color-checkbox-checked);
   }
    
   
@@ -45,18 +45,18 @@
 
   //FOCUS
   input[type="checkbox"]:focus + label {
-    @include focus-box-shadow-checkbox($color-checkbox-focused);
+    @include focus-box-shadow-checkbox($ff-color-checkbox-focused);
   }  
   input[type="checkbox"].incorrect:focus + label {
-    @include focus-box-shadow-checkbox($color-checkbox-answer-incorrect);
+    @include focus-box-shadow-checkbox($ff-color-checkbox-answer-incorrect);
   }
   input[type="checkbox"].correct:focus + label {
-    @include focus-box-shadow-checkbox($color-checkbox-answer-correct);
+    @include focus-box-shadow-checkbox($ff-color-checkbox-answer-correct);
   }
 
   //HOVER
   input[type="checkbox"]:not(:disabled):hover + label {
-    @include border-2($color-1);
+    @include border-2($ff-color-checkbox-hover);
   }
 
   //CHECKED
@@ -64,13 +64,13 @@
     opacity: 1;
   }
   input[type="checkbox"]:checked + label {
-    border-color: $color-1;
+    border-color: $ff-color-checkbox-checked;
   }
   input[type="checkbox"].correct:checked + label {
-    border-color: $color-success
+    border-color: $ff-color-checkbox-answer-correct;
   }
   input[type="checkbox"].incorrect:checked + label {
-    border-color: $color-alert;
+    border-color: $ff-color-checkbox-answer-incorrect;
   } 
 
   //DISABLED
@@ -90,15 +90,15 @@
 
   //CORRECT & INCORRECT NOT SELECTED  
   input[type="checkbox"].incorrect + label:after {
-    @include border-tick($color-alert);
+    @include border-tick($ff-color-checkbox-answer-incorrect);
   }
   input[type="checkbox"].correct + label:after {
-    @include border-tick($color-success);
+    @include border-tick($ff-color-checkbox-answer-correct);
   }
 
   //ACCESSIBILITY
   input[type="checkbox"].incorrect + label:before {
-    border-bottom: 2px solid $color-alert;
+    border-bottom: 2px solid $ff-color-checkbox-answer-incorrect;
     width: 1em;
     display: block;
     content: ' ';

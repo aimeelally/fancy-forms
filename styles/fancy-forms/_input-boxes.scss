@@ -8,42 +8,42 @@
   outline: none;
   padding: 0.3em;
   font: inherit;
-  color: $font-on-light-bg;
+  color: inherit;
   @include rounded(2px);
-  @include border-2($color-neutral-5);
+  @include border-2($ff-color-inputbox-border);
   
   &.correct {
-    @include border-2($color-success);
+    @include border-2($ff-color-inputbox-answer-correct);
   }
   &.incorrect {
-    @include border-2($color-alert);
-    @include accessibility-border-bottom($color-alert);
+    @include border-2($ff-color-inputbox-answer-incorrect);
+    @include accessibility-border-bottom($ff-color-inputbox-answer-incorrect);
   }
   
   /*** STATES ***/
   
   //FOCUS
   &:focus {
-    @include focus-box-shadow-input($color-1);
-    @include border-2($color-1);
+    @include focus-box-shadow-input($ff-color-inputbox-focused);
+    @include border-2($ff-color-inputbox-focused);
   }  
   &.incorrect:focus {
-    @include focus-box-shadow-input($color-alert);
-    @include border-2($color-alert);
-    @include accessibility-border-bottom($color-alert);
+    @include focus-box-shadow-input($ff-color-inputbox-answer-incorrect);
+    @include border-2($ff-color-inputbox-answer-incorrect);
+    @include accessibility-border-bottom($ff-color-inputbox-answer-incorrect);
   }
   &.correct:focus  {
-    @include focus-box-shadow-input($color-success);
-    @include border-2($color-success);
+    @include focus-box-shadow-input($ff-color-inputbox-answer-correct);
+    @include border-2($ff-color-inputbox-answer-correct);
   }
   
   //HOVER
   &:not(:disabled):hover {
-    @include border-2($color-1);
+    @include border-2($ff-color-inputbox-hover);
   }
   &.incorrect:not(:disabled):hover {
-    @include border-2($color-1);
-    @include accessibility-border-bottom($color-1);
+    @include border-2($ff-color-inputbox-answer-incorrect);
+    @include accessibility-border-bottom($ff-color-inputbox-answer-incorrect);
   }
   
   //DISABLED
@@ -62,7 +62,7 @@
 
 .fancy-input-boxes input[type="color"] {
   padding: 0;
-  background-color: $color-neutral-0;
+  background-color: $ff-color-inputbox-bg;
 }
 
 .fancy-input-boxes.special-inline-border input[type="text"] {
