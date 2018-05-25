@@ -763,6 +763,7 @@ button:focus {
   border-top: 0.2em solid #a1a1a1;
   border-right: 0.2em solid #a1a1a1;
   z-index: 2;
+  transform-origin: center;
   transform: rotate(135deg); }
 
 .fancy-select-boxes select {
@@ -783,27 +784,50 @@ button:focus {
   /*** STATES ***/ }
   .fancy-select-boxes select:focus {
     box-shadow: 1px 1px 10px 1px #F90093; }
+  .fancy-select-boxes select:focus ~ .chevron {
+    border-color: #F90093; }
   .fancy-select-boxes select.incorrect:focus {
     box-shadow: 1px 1px 10px 1px #ff6666; }
+  .fancy-select-boxes select.incorrect:focus ~ .chevron {
+    border-color: #ff6666; }
   .fancy-select-boxes select.correct:focus {
     box-shadow: 1px 1px 10px 1px #70C1B3; }
+  .fancy-select-boxes select.correct:focus ~ .chevron {
+    border-color: #70C1B3; }
   .fancy-select-boxes select.incorrect option:checked {
     color: #ff6666; }
   .fancy-select-boxes select:not(:disabled):hover {
     border: 2px solid #F90093; }
+  .fancy-select-boxes select:not(:disabled):hover ~ .chevron {
+    border-color: #F90093;
+    transform: translateY(2px) rotate(135deg);
+    transition: transform 0.2s ease-out; }
+  .fancy-select-boxes select.correct:not(:disabled):hover {
+    border: 2px solid #70C1B3; }
+  .fancy-select-boxes select.correct:not(:disabled):hover ~ .chevron {
+    border-color: #70C1B3; }
   .fancy-select-boxes select.incorrect:not(:disabled):hover {
     border-bottom: 5px double #ff6666; }
-  .fancy-select-boxes select:disabled {
+  .fancy-select-boxes select.incorrect:not(:disabled):hover ~ .chevron {
+    border-color: #ff6666; }
+  .fancy-select-boxes select:disabled,
+  .fancy-select-boxes select:disabled ~ .chevron {
     opacity: 0.5;
     cursor: not-allowed; }
-  .fancy-select-boxes select.correct:disabled, .fancy-select-boxes select.incorrect:disabled {
+  .fancy-select-boxes select.correct:disabled, .fancy-select-boxes select.incorrect:disabled,
+  .fancy-select-boxes select.correct:disabled ~ .chevron,
+  .fancy-select-boxes select.incorrect:disabled ~ .chevron {
     opacity: 1;
     cursor: not-allowed; }
   .fancy-select-boxes select.incorrect {
     border: 2px solid #ff6666;
     border-bottom: 5px double #ff6666; }
+  .fancy-select-boxes select.incorrect ~ .chevron {
+    border-color: #ff6666; }
   .fancy-select-boxes select.correct {
     border: 2px solid #70C1B3; }
+  .fancy-select-boxes select.correct ~ .chevron {
+    border-color: #70C1B3; }
 
 /*** /FANCY SELECT BOX **/
 .fancy-labels label {
