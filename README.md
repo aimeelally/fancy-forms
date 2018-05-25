@@ -17,6 +17,9 @@ FANCY FORM ELEMENTS
 - fancy labels using radio buttons
 - fancy labels using checkboxes
 
+HOW TO USE
+- 
+
 REQUIRED FOR THIS TO BE WORKABLE FOR NON-ADAPTEMY USERS
 - need to control box sizing on the form elements
 - extract the variables
@@ -24,5 +27,20 @@ REQUIRED FOR THIS TO BE WORKABLE FOR NON-ADAPTEMY USERS
 - what about the grid system we use to layout the fancy labels??
 - need to provide an area of variables for users to set their own colours 
 - show how to add colours via css also
+
+INPUT BOXES
+- active
+- hover
+- focused
+- answer correct
+- answer incorrect
+
+SELECT BOXES
+RADIO BUTTONS
+RADIO BUTTONS WITH IMAGES
+FANCY LABELS WITH RADIO BUTTONS
+CHECKBOXES
+CHECKBOXES WITH IMAGES
+FANCY LABELS WITH CHECKBOXES
 
 
