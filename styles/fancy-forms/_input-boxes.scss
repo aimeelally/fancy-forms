@@ -4,7 +4,13 @@
 .fancy-input-boxes input[type="search"],
 .fancy-input-boxes input[type="number"],
 .fancy-input-boxes input[type="color"],
-.fancy-input-boxes input[type="password"] {
+.fancy-input-boxes input[type="password"],
+input[type="text"].fancy-input-boxes,
+input[type="search"].fancy-input-boxes,
+input[type="number"].fancy-input-boxes,
+input[type="color"].fancy-input-boxes,
+input[type="password"].fancy-input-boxes {
+  
   outline: none;
   padding: 0.3em;
   font: inherit;

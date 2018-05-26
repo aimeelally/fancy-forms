@@ -11,7 +11,10 @@
     vertical-align: middle;
     cursor: pointer;
     display:inline-block;
-    //box-sizing: initial;
+  }
+  
+  input[type="radio"] + label:before {
+    box-sizing: border-box;
   }
  
   input[type="radio"] + label:before{
@@ -37,19 +40,6 @@
     left: 0;
     cursor: pointer;
   }
-
-  //ACCESSIBILITY
-  input[type="radio"].incorrect + label:after {
-      border-bottom: 2px solid $ff-color-radiobutton-answer-incorrect;
-      width: 8px;
-      display: block;
-      position: absolute;
-      content: ' ';
-      bottom: -0.2em;
-      left:6px;
-    }
-
-
 
   //THE TARGET
   input[type="radio"] + label:before {
@@ -153,13 +143,12 @@
     //ACCESSIBILITY
     input[type="radio"].incorrect + label:after {
       border-bottom: 2px solid $ff-color-radiobutton-answer-incorrect;
-      width: 8px;
+      width: 0.8em;
       display: block;
       position: absolute;
       content: ' ';
-      top: calc(50% + 1em);
-      bottom: initial;
-      left:6px;
+      top: calc(50% + 0.8em);
+      left: 0.2em;
     }
     img {
       max-width: 100%;

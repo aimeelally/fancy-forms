@@ -28,12 +28,28 @@ REQUIRED FOR THIS TO BE WORKABLE FOR NON-ADAPTEMY USERS
 - need to provide an area of variables for users to set their own colours 
 - show how to add colours via css also
 
-INPUT BOXES
+STATES
+
+INPUT BOXES, 
+SELECT BOXES, 
+CHECK BOXES (& with images),
+RADIO BUTTONS (& with images)
 - active
 - hover
 - focused
 - answer correct
 - answer incorrect
+- disabled
+
+FANCY LABELS CHECKBOXES,
+FANCY LABELS RADIO BUTTONS
+- active
+- hover
+- focused
+- disabled
+
+
+
 
 SELECT BOXES
 RADIO BUTTONS
