@@ -24,6 +24,7 @@
     border-top: 0.2em solid $ff-color-selectbox-chevron;
     border-right: 0.2em solid $ff-color-selectbox-chevron;
     z-index: 2;
+    transform-origin: center;
     transform: rotate(135deg);
   }
 
@@ -49,12 +50,22 @@
     &:focus {
       @include focus-box-shadow($ff-color-selectbox-focused);
     }  
+    &:focus ~ .chevron {
+      border-color: $ff-color-selectbox-focused;
+    }
     &.incorrect:focus {
       @include focus-box-shadow($ff-color-selectbox-answer-incorrect);
+    }
+    &.incorrect:focus ~ .chevron {
+      border-color: $ff-color-selectbox-answer-incorrect;
     }
     &.correct:focus {
       @include focus-box-shadow($ff-color-selectbox-answer-correct);
     }
+    &.correct:focus ~ .chevron {
+      border-color: $ff-color-selectbox-answer-correct;
+    }
+    
     
     //SELECTED
     &.incorrect option:checked {
@@ -63,21 +74,40 @@
     
     //HOVER
     &:not(:disabled):hover {
-      @include border-2($ff-color-selectbox-focused);
+      @include border-2($ff-color-selectbox-hover);
+    }
+    &:not(:disabled):hover ~ .chevron {
+      border-color: $ff-color-selectbox-hover;
+      transform: translateY(2px) rotate(135deg) ;
+      transition: transform 0.2s ease-out;
+    }
+    
+    &.correct:not(:disabled):hover {
+      @include border-2($ff-color-selectbox-answer-correct);
+    }
+    &.correct:not(:disabled):hover ~ .chevron {
+      border-color: $ff-color-selectbox-answer-correct;
     }
 
     &.incorrect:not(:disabled):hover {
       @include accessibility-border-bottom($ff-color-selectbox-answer-incorrect);
     }
+    &.incorrect:not(:disabled):hover ~ .chevron {
+      border-color: $ff-color-selectbox-answer-incorrect;
+    }
+  
     
     //DISABLED
-    &:disabled {
+    &:disabled,
+    &:disabled ~ .chevron {
       opacity: 0.5;
       cursor: not-allowed;
     }
     
     &.correct:disabled,
-    &.incorrect:disabled {
+    &.incorrect:disabled,
+    &.correct:disabled ~ .chevron,
+    &.incorrect:disabled ~ .chevron {
       opacity: 1;
       cursor: not-allowed;
     }
@@ -86,11 +116,19 @@
       @include border-2($ff-color-selectbox-answer-incorrect);
       @include accessibility-border-bottom($ff-color-selectbox-answer-incorrect);
     }
+    &.incorrect ~ .chevron {
+      border-color: $ff-color-selectbox-answer-incorrect;
+    }
     &.correct {
       @include border-2($ff-color-selectbox-answer-correct);
     }
+    &.correct ~ .chevron {
+      border-color: $ff-color-selectbox-answer-correct;
+    }
     
   }
+  
+  
 }
 
 /*** /FANCY SELECT BOX **/

@@ -1,16 +1,18 @@
-.fancy-labels{
+/*** FANCY LABELS USING CHECKBOXES & RADIO BUTTONS ***/
+
+.fancy-labels {
 
   label {
-    @include border-2($color-neutral-5);
-    background-color: $color-neutral-0;
+    @include border-2($ff-color-label-border);
+    background-color: $ff-color-label-bg;
     cursor: pointer;
     padding: 0.5em;
     text-align: center;
     margin-bottom: 0.2em; //provides a gap between options on smaller screens
     transition: all 0.2s ease-in-out;
     &:hover {
-      @include border-2($color-1);
-      color: $color-1;
+      @include border-2($ff-color-label-hover);
+      color: $ff-color-label-text-hover;
       transition: all 0.2s ease-in-out;
     }
   }
@@ -19,18 +21,20 @@
     opacity: 0;
     position: absolute;
     &:focus + label {
-      @include focus-box-shadow-input($color-1)
+      @include focus-box-shadow-input($ff-color-label-focused)
     }
     &:checked + label,
     &:active + label {
-      background-color: $color-1;
-      @include border-2($color-1);
-      color: $color-neutral-0;
+      background-color: $ff-color-label-checked;
+      @include border-2($ff-color-label-checked);
+      color: $ff-color-label-text-checked;
       transition: all 0.2s ease-in-out;
     }
   }
 
 }
+
+/*** FANCY LABELS USING CHECKBOXES & RADIO BUTTONS ***/
 
 /*
 EXAMPLE USE: RADIO BUTTONS

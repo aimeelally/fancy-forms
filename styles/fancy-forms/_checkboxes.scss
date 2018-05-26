@@ -8,6 +8,11 @@
     position: absolute;
   } 
   
+  input[type="checkbox"] + label,
+  input[type="checkbox"] + label:after {
+    box-sizing: border-box;
+  }
+  
   input[type="checkbox"] + label {
     width: 1.5em;
     height: 1.5em;
@@ -147,17 +152,6 @@
     input[type="checkbox"] + label {
       position: absolute;
       top: calc(50% - 0.5em); //50% + half the height of a checkbox so it lines up correctly
-    }
-    //ACCESSIBILITY
-    input[type="checkbox"].incorrect + label + label:after {
-      border-bottom: 2px solid $ff-color-checkbox-answer-incorrect;
-      width: 8px;
-      display: block;
-      position: absolute;
-      content: ' ';
-      top: calc(50% + 1em);
-      bottom: initial;
-      left:6px;
     }
     img {
       max-width: 100%;

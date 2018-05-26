@@ -397,6 +397,8 @@ button:focus {
     cursor: pointer;
     display: inline-block; }
   .fancy-radio-buttons input[type="radio"] + label:before {
+    box-sizing: border-box; }
+  .fancy-radio-buttons input[type="radio"] + label:before {
     content: "";
     position: absolute;
     left: 0;
@@ -416,14 +418,6 @@ button:focus {
     right: 0;
     left: 0;
     cursor: pointer; }
-  .fancy-radio-buttons input[type="radio"].incorrect + label:after {
-    border-bottom: 2px solid #ff6666;
-    width: 8px;
-    display: block;
-    position: absolute;
-    content: ' ';
-    bottom: -0.2em;
-    left: 6px; }
   .fancy-radio-buttons input[type="radio"] + label:before {
     background: #ffffff;
     z-index: 1; }
@@ -489,13 +483,12 @@ button:focus {
       top: calc(50% - 0.5em); }
     .fancy-radio-buttons.with-image input[type="radio"].incorrect + label:after {
       border-bottom: 2px solid #ff6666;
-      width: 8px;
+      width: 0.8em;
       display: block;
       position: absolute;
       content: ' ';
-      top: calc(50% + 1em);
-      bottom: initial;
-      left: 6px; }
+      top: calc(50% + 0.8em);
+      left: 0.2em; }
     .fancy-radio-buttons.with-image img {
       max-width: 100%; }
 
@@ -508,6 +501,9 @@ button:focus {
   .fancy-checkboxes input[type="checkbox"] {
     opacity: 0;
     position: absolute; }
+  .fancy-checkboxes input[type="checkbox"] + label,
+  .fancy-checkboxes input[type="checkbox"] + label:after {
+    box-sizing: border-box; }
   .fancy-checkboxes input[type="checkbox"] + label {
     width: 1.5em;
     height: 1.5em;
@@ -608,15 +604,6 @@ button:focus {
     .fancy-checkboxes.with-image input[type="checkbox"] + label {
       position: absolute;
       top: calc(50% - 0.5em); }
-    .fancy-checkboxes.with-image input[type="checkbox"].incorrect + label + label:after {
-      border-bottom: 2px solid #ff6666;
-      width: 8px;
-      display: block;
-      position: absolute;
-      content: ' ';
-      top: calc(50% + 1em);
-      bottom: initial;
-      left: 6px; }
     .fancy-checkboxes.with-image img {
       max-width: 100%; }
 
@@ -626,7 +613,12 @@ button:focus {
 .fancy-input-boxes input[type="search"],
 .fancy-input-boxes input[type="number"],
 .fancy-input-boxes input[type="color"],
-.fancy-input-boxes input[type="password"] {
+.fancy-input-boxes input[type="password"],
+input[type="text"].fancy-input-boxes,
+input[type="search"].fancy-input-boxes,
+input[type="number"].fancy-input-boxes,
+input[type="color"].fancy-input-boxes,
+input[type="password"].fancy-input-boxes {
   outline: none;
   padding: 0.3em;
   font: inherit;
@@ -640,27 +632,47 @@ button:focus {
   .fancy-input-boxes input[type="search"].correct,
   .fancy-input-boxes input[type="number"].correct,
   .fancy-input-boxes input[type="color"].correct,
-  .fancy-input-boxes input[type="password"].correct {
+  .fancy-input-boxes input[type="password"].correct,
+  input[type="text"].fancy-input-boxes.correct,
+  input[type="search"].fancy-input-boxes.correct,
+  input[type="number"].fancy-input-boxes.correct,
+  input[type="color"].fancy-input-boxes.correct,
+  input[type="password"].fancy-input-boxes.correct {
     border: 2px solid #70C1B3; }
   .fancy-input-boxes input[type="text"].incorrect,
   .fancy-input-boxes input[type="search"].incorrect,
   .fancy-input-boxes input[type="number"].incorrect,
   .fancy-input-boxes input[type="color"].incorrect,
-  .fancy-input-boxes input[type="password"].incorrect {
+  .fancy-input-boxes input[type="password"].incorrect,
+  input[type="text"].fancy-input-boxes.incorrect,
+  input[type="search"].fancy-input-boxes.incorrect,
+  input[type="number"].fancy-input-boxes.incorrect,
+  input[type="color"].fancy-input-boxes.incorrect,
+  input[type="password"].fancy-input-boxes.incorrect {
     border: 2px solid #ff6666;
     border-bottom: 5px double #ff6666; }
   .fancy-input-boxes input[type="text"]:focus,
   .fancy-input-boxes input[type="search"]:focus,
   .fancy-input-boxes input[type="number"]:focus,
   .fancy-input-boxes input[type="color"]:focus,
-  .fancy-input-boxes input[type="password"]:focus {
+  .fancy-input-boxes input[type="password"]:focus,
+  input[type="text"].fancy-input-boxes:focus,
+  input[type="search"].fancy-input-boxes:focus,
+  input[type="number"].fancy-input-boxes:focus,
+  input[type="color"].fancy-input-boxes:focus,
+  input[type="password"].fancy-input-boxes:focus {
     box-shadow: 0px 0px 10px 0px #F90093;
     border: 2px solid #F90093; }
   .fancy-input-boxes input[type="text"].incorrect:focus,
   .fancy-input-boxes input[type="search"].incorrect:focus,
   .fancy-input-boxes input[type="number"].incorrect:focus,
   .fancy-input-boxes input[type="color"].incorrect:focus,
-  .fancy-input-boxes input[type="password"].incorrect:focus {
+  .fancy-input-boxes input[type="password"].incorrect:focus,
+  input[type="text"].fancy-input-boxes.incorrect:focus,
+  input[type="search"].fancy-input-boxes.incorrect:focus,
+  input[type="number"].fancy-input-boxes.incorrect:focus,
+  input[type="color"].fancy-input-boxes.incorrect:focus,
+  input[type="password"].fancy-input-boxes.incorrect:focus {
     box-shadow: 0px 0px 10px 0px #ff6666;
     border: 2px solid #ff6666;
     border-bottom: 5px double #ff6666; }
@@ -668,27 +680,47 @@ button:focus {
   .fancy-input-boxes input[type="search"].correct:focus,
   .fancy-input-boxes input[type="number"].correct:focus,
   .fancy-input-boxes input[type="color"].correct:focus,
-  .fancy-input-boxes input[type="password"].correct:focus {
+  .fancy-input-boxes input[type="password"].correct:focus,
+  input[type="text"].fancy-input-boxes.correct:focus,
+  input[type="search"].fancy-input-boxes.correct:focus,
+  input[type="number"].fancy-input-boxes.correct:focus,
+  input[type="color"].fancy-input-boxes.correct:focus,
+  input[type="password"].fancy-input-boxes.correct:focus {
     box-shadow: 0px 0px 10px 0px #70C1B3;
     border: 2px solid #70C1B3; }
   .fancy-input-boxes input[type="text"]:not(:disabled):hover,
   .fancy-input-boxes input[type="search"]:not(:disabled):hover,
   .fancy-input-boxes input[type="number"]:not(:disabled):hover,
   .fancy-input-boxes input[type="color"]:not(:disabled):hover,
-  .fancy-input-boxes input[type="password"]:not(:disabled):hover {
+  .fancy-input-boxes input[type="password"]:not(:disabled):hover,
+  input[type="text"].fancy-input-boxes:not(:disabled):hover,
+  input[type="search"].fancy-input-boxes:not(:disabled):hover,
+  input[type="number"].fancy-input-boxes:not(:disabled):hover,
+  input[type="color"].fancy-input-boxes:not(:disabled):hover,
+  input[type="password"].fancy-input-boxes:not(:disabled):hover {
     border: 2px solid #F90093; }
   .fancy-input-boxes input[type="text"].incorrect:not(:disabled):hover,
   .fancy-input-boxes input[type="search"].incorrect:not(:disabled):hover,
   .fancy-input-boxes input[type="number"].incorrect:not(:disabled):hover,
   .fancy-input-boxes input[type="color"].incorrect:not(:disabled):hover,
-  .fancy-input-boxes input[type="password"].incorrect:not(:disabled):hover {
+  .fancy-input-boxes input[type="password"].incorrect:not(:disabled):hover,
+  input[type="text"].fancy-input-boxes.incorrect:not(:disabled):hover,
+  input[type="search"].fancy-input-boxes.incorrect:not(:disabled):hover,
+  input[type="number"].fancy-input-boxes.incorrect:not(:disabled):hover,
+  input[type="color"].fancy-input-boxes.incorrect:not(:disabled):hover,
+  input[type="password"].fancy-input-boxes.incorrect:not(:disabled):hover {
     border: 2px solid #ff6666;
     border-bottom: 5px double #ff6666; }
   .fancy-input-boxes input[type="text"]:disabled,
   .fancy-input-boxes input[type="search"]:disabled,
   .fancy-input-boxes input[type="number"]:disabled,
   .fancy-input-boxes input[type="color"]:disabled,
-  .fancy-input-boxes input[type="password"]:disabled {
+  .fancy-input-boxes input[type="password"]:disabled,
+  input[type="text"].fancy-input-boxes:disabled,
+  input[type="search"].fancy-input-boxes:disabled,
+  input[type="number"].fancy-input-boxes:disabled,
+  input[type="color"].fancy-input-boxes:disabled,
+  input[type="password"].fancy-input-boxes:disabled {
     opacity: 0.8;
     cursor: not-allowed; }
   .fancy-input-boxes input[type="text"].correct:disabled, .fancy-input-boxes input[type="text"].incorrect:disabled,
@@ -699,7 +731,17 @@ button:focus {
   .fancy-input-boxes input[type="color"].correct:disabled,
   .fancy-input-boxes input[type="color"].incorrect:disabled,
   .fancy-input-boxes input[type="password"].correct:disabled,
-  .fancy-input-boxes input[type="password"].incorrect:disabled {
+  .fancy-input-boxes input[type="password"].incorrect:disabled,
+  input[type="text"].fancy-input-boxes.correct:disabled,
+  input[type="text"].fancy-input-boxes.incorrect:disabled,
+  input[type="search"].fancy-input-boxes.correct:disabled,
+  input[type="search"].fancy-input-boxes.incorrect:disabled,
+  input[type="number"].fancy-input-boxes.correct:disabled,
+  input[type="number"].fancy-input-boxes.incorrect:disabled,
+  input[type="color"].fancy-input-boxes.correct:disabled,
+  input[type="color"].fancy-input-boxes.incorrect:disabled,
+  input[type="password"].fancy-input-boxes.correct:disabled,
+  input[type="password"].fancy-input-boxes.incorrect:disabled {
     opacity: 1;
     cursor: not-allowed; }
 
@@ -763,6 +805,7 @@ button:focus {
   border-top: 0.2em solid #a1a1a1;
   border-right: 0.2em solid #a1a1a1;
   z-index: 2;
+  transform-origin: center;
   transform: rotate(135deg); }
 
 .fancy-select-boxes select {
@@ -783,29 +826,53 @@ button:focus {
   /*** STATES ***/ }
   .fancy-select-boxes select:focus {
     box-shadow: 1px 1px 10px 1px #F90093; }
+  .fancy-select-boxes select:focus ~ .chevron {
+    border-color: #F90093; }
   .fancy-select-boxes select.incorrect:focus {
     box-shadow: 1px 1px 10px 1px #ff6666; }
+  .fancy-select-boxes select.incorrect:focus ~ .chevron {
+    border-color: #ff6666; }
   .fancy-select-boxes select.correct:focus {
     box-shadow: 1px 1px 10px 1px #70C1B3; }
+  .fancy-select-boxes select.correct:focus ~ .chevron {
+    border-color: #70C1B3; }
   .fancy-select-boxes select.incorrect option:checked {
     color: #ff6666; }
   .fancy-select-boxes select:not(:disabled):hover {
     border: 2px solid #F90093; }
+  .fancy-select-boxes select:not(:disabled):hover ~ .chevron {
+    border-color: #F90093;
+    transform: translateY(2px) rotate(135deg);
+    transition: transform 0.2s ease-out; }
+  .fancy-select-boxes select.correct:not(:disabled):hover {
+    border: 2px solid #70C1B3; }
+  .fancy-select-boxes select.correct:not(:disabled):hover ~ .chevron {
+    border-color: #70C1B3; }
   .fancy-select-boxes select.incorrect:not(:disabled):hover {
     border-bottom: 5px double #ff6666; }
-  .fancy-select-boxes select:disabled {
+  .fancy-select-boxes select.incorrect:not(:disabled):hover ~ .chevron {
+    border-color: #ff6666; }
+  .fancy-select-boxes select:disabled,
+  .fancy-select-boxes select:disabled ~ .chevron {
     opacity: 0.5;
     cursor: not-allowed; }
-  .fancy-select-boxes select.correct:disabled, .fancy-select-boxes select.incorrect:disabled {
+  .fancy-select-boxes select.correct:disabled, .fancy-select-boxes select.incorrect:disabled,
+  .fancy-select-boxes select.correct:disabled ~ .chevron,
+  .fancy-select-boxes select.incorrect:disabled ~ .chevron {
     opacity: 1;
     cursor: not-allowed; }
   .fancy-select-boxes select.incorrect {
     border: 2px solid #ff6666;
     border-bottom: 5px double #ff6666; }
+  .fancy-select-boxes select.incorrect ~ .chevron {
+    border-color: #ff6666; }
   .fancy-select-boxes select.correct {
     border: 2px solid #70C1B3; }
+  .fancy-select-boxes select.correct ~ .chevron {
+    border-color: #70C1B3; }
 
 /*** /FANCY SELECT BOX **/
+/*** FANCY LABELS USING CHECKBOXES & RADIO BUTTONS ***/
 .fancy-labels label {
   border: 2px solid #a1a1a1;
   background-color: #ffffff;
@@ -831,6 +898,7 @@ button:focus {
     color: #ffffff;
     transition: all 0.2s ease-in-out; }
 
+/*** FANCY LABELS USING CHECKBOXES & RADIO BUTTONS ***/
 /*
 EXAMPLE USE: RADIO BUTTONS
 <radiogroup class="fancy-labels splan-12">
