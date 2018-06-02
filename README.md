@@ -1,7 +1,7 @@
 # fancy-forms
 SCSS library of fancy form elements
 
-##HOW TO USE
+## HOW TO USE
 - copy the variables and imports below into whatever file you use to compile your SASS e.g. base.scss.
 - Note: it must go in this order to allow you to override the default colours.
 - To modify the colours, change the variables.
@@ -17,7 +17,7 @@ $ff-color-initial-state: #a1a1a1;<br/><br/>
 
 
 
-##FANCY FORM ELEMENTS
+## FANCY FORM ELEMENTS
 - input boxes
 - checkboxes
 - radio buttons
