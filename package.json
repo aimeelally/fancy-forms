@@ -9,6 +9,14 @@
     "build-css": "node-sass --include-path scss ./styles/base.scss ./styles/base.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
+  "keywords": [
+    "css",
+    "scss",
+    "sass",
+    "pure css",
+    "html forms",
+    "fancy forms"
+  ],
   "devDependencies": {
     "node-sass": "^4.9.0"
   }
