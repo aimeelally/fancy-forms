@@ -1,11 +1,13 @@
 /*** FANCY INPUT BOXES ***/
 
 .fancy-input-boxes input[type="text"],
+.fancy-input-boxes input[type="email"],
 .fancy-input-boxes input[type="search"],
 .fancy-input-boxes input[type="number"],
 .fancy-input-boxes input[type="color"],
 .fancy-input-boxes input[type="password"],
 input[type="text"].fancy-input-boxes,
+input[type="email"].fancy-input-boxes,
 input[type="search"].fancy-input-boxes,
 input[type="number"].fancy-input-boxes,
 input[type="color"].fancy-input-boxes,
