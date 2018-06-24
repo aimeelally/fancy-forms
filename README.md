@@ -1,7 +1,7 @@
 # fancy-forms
 
 >Fancy Forms is a pure SCSS library of fully accessible native form elements.<br/>
-Head to [aimeelally.com/fancy-forms](www.aimeelally.com/fancy-forms/index.html) to see examples of each element.<br/>
+Head to [aimeelally.com/fancy-forms](http://www.aimeelally.com/fancy-forms/index.html) to see examples of each element.<br/>
 
 Native form elements are sometimes limited in their styling capabilities (I'm looking at you select boxes!). I have come across instances where some major companies have even tried to mock the behaviour of a select box using javascript instead of using the native element. This creates a whole host of issues. 
 
@@ -29,7 +29,7 @@ $ff-color-answer-incorrect: red;
 `
 
 ## ACCESSIBILITY AND COLOUR BLINDNESS
-Use the variables `$ff-color-answer-correct` and `$ff-color-answer-incorrect` to utilise this module in question players where **correct** and **incorrect** classes are applied to form elements. See [aimeelally.com/fancy-forms](www.aimeelally.com/fancy-forms/index.html) for examples.
+Use the variables `$ff-color-answer-correct` and `$ff-color-answer-incorrect` to utilise this module in question players where **correct** and **incorrect** classes are applied to form elements. See [aimeelally.com/fancy-forms](http://www.aimeelally.com/fancy-forms/index.html) for examples.
 
 >**ff-color-answer-incorrect** puts a line beneath form elements with the **incorrect** class. The most common type of colour blindness is red/green, which also happen to be the most common colours to indicate correct and incorrect states. The extra line beneath incorrect elements makes them accessible for anyone suffering from colour blindness.
 
