@@ -44,6 +44,12 @@
     z-index: 3;
     cursor: pointer;
     
+    @keyframes animate-chevron {
+      0% { transform: translateY(0px) rotate(135deg) ; }
+      50% { transform: translateY(2px) rotate(135deg) ; }
+      100% { transform: translateY(0px) rotate(135deg) ; }
+    }
+    
     /*** STATES ***/
     
     //FOCUS
@@ -78,8 +84,7 @@
     }
     &:not(:disabled):hover ~ .chevron {
       border-color: $ff-color-selectbox-hover;
-      transform: translateY(2px) rotate(135deg) ;
-      transition: transform 0.2s ease-out;
+      animation: animate-chevron 0.5s forwards;
     }
     
     &.correct:not(:disabled):hover {

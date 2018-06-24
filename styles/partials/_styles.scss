@@ -1,0 +1,73 @@
+// we're using border-box unless specified otherwise
+html, body {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; 
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  -moz-box-sizing: inherit;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+$color-primary: #F90093;
+$color-font: #4a4a49;
+$sidebar-width: 250px;
+
+body {
+  font-size: 100%;
+  font: inherit;
+  font-family: 'Lato', sans-serif;
+  color: $color-font;
+}
+
+.page-padding {
+  padding: 5% 10%;
+}
+
+.btn-3 {
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .5s ease;
+  color: white;
+  border: none;
+  background: none;
+  &:hover{
+    color: $color-primary;
+  }
+}
+
+aside {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding: 1em;
+  width: $sidebar-width;
+  height: 100%;
+  background: $color-font;
+  color: $color-primary;
+}
+
+main {
+  padding-left: $sidebar-width;
+}
+
+.block {
+  display:block;
+}
+.margin-bottom {
+  margin-bottom: 16px;
+}
+
+.bg-blue { background: aliceblue; }
+.bg-lavender { background: lavender; }
+.bg-yellow { background: lightyellow; }
+.bg-orange { background: bisque; }
+.bg-green { background: palegreen; }
+.bg-aquamarine { background: aquamarine; }
+.bg-cadetblue { background: cadetblue; }
+
