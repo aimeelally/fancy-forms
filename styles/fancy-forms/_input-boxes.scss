@@ -6,12 +6,16 @@
 .fancy-input-boxes input[type="number"],
 .fancy-input-boxes input[type="color"],
 .fancy-input-boxes input[type="password"],
+.fancy-input-boxes input[type="date"],
+textarea,
 input[type="text"].fancy-input-boxes,
 input[type="email"].fancy-input-boxes,
 input[type="search"].fancy-input-boxes,
 input[type="number"].fancy-input-boxes,
 input[type="color"].fancy-input-boxes,
-input[type="password"].fancy-input-boxes {
+input[type="password"].fancy-input-boxes,
+input[type="date"].fancy-input-boxes,
+textarea.fancy-input-boxes {
   
   outline: none;
   padding: 0.3em;
