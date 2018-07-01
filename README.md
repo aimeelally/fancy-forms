@@ -20,13 +20,15 @@ Your browser automatically knows what to do with `<select></select>`. It does no
 - Copy the code below into whatever file you use to compile your SASS e.g. base.scss.
 - Change the variables to modify the colours to fit your own brand.
 
-`@import '~fancy-forms/styles/fancy-forms/base';  
+```
 $ff-color-initial-state: grey;
 $ff-color-primary: blue;
 $ff-color-bg: white;
 $ff-color-answer-correct: green;
 $ff-color-answer-incorrect: red;
-`
+@import '~fancy-forms/styles/fancy-forms/base';  
+
+```
 
 ## ACCESSIBILITY AND COLOUR BLINDNESS
 Use the variables `$ff-color-answer-correct` and `$ff-color-answer-incorrect` to utilise this module in question players where **correct** and **incorrect** classes are applied to form elements. See [aimeelally.com/fancy-forms](http://www.aimeelally.com/fancy-forms/index.html) for examples.
