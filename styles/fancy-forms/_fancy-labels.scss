@@ -24,7 +24,7 @@
     &:not(:disabled):focus + label {
       @include focus-box-shadow-input($ff-color-label-focused)
     }
-    &:not(:disabled):checked + label,
+    &:checked + label,
     &:not(:disabled):active + label {
       background-color: $ff-color-label-checked;
       @include border-2($ff-color-label-checked);
